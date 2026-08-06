@@ -1,6 +1,6 @@
 # Privacy Policy: Model Picker
 
-This policy covers the Model Picker browser extension. It was last updated on July 31, 2026.
+This policy covers the Model Picker browser extension. It was last updated on August 6, 2026.
 
 Everything runs on your device. The extension makes no network requests and never stores your prompt text.
 
@@ -10,12 +10,13 @@ The extension runs only on claude.ai. There it reads the prompt you are drafting
 
 ## What the extension stores
 
-The extension stores two kinds of things in your browser's local extension storage (chrome.storage.local), and nothing anywhere else:
+The extension stores three kinds of things in your browser's local extension storage (chrome.storage.local), and nothing anywhere else:
 
-- Your own settings: the switches, sliders, theme, badge position, and per chat choices you set in the popup and the options page.
+- Your own settings: the switches, sliders, theme, plan, badge position and size, and the per chat choices (mute, lock) you set in the popup and the options page. A few of these are short fixed words rather than numbers (your theme choice, your plan name, which corner the badge is pinned to), and the per chat mute and lock lists are keyed by the conversation's own address on claude.ai, so the record durably names which conversations you chose to mute or lock. None of this is prompt text, conversation text, or any other free text.
 - Anonymous derived counters: how many suggestions were shown and sent per category, and your feedback votes. Your feedback votes are stored as anonymous per category counters you can inspect in plain storage.
+- Operational health: whether the extension can still find the parts of the claude.ai page it reads from. This is stored as counts, booleans, and timestamps only, never as any text read off the page, so a broken reader can be detected without ever recording what it read.
 
-It never stores prompt text, conversation text, or any string read from the page. The stored record holds numbers, switches, and timestamps only.
+It never stores prompt text, conversation text, or any other string read from the page. Everything above stays on your device; see "What the extension transmits" below.
 
 ## What the extension transmits
 

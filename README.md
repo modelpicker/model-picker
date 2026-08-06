@@ -14,10 +14,11 @@ Model Picker is a Chrome extension for claude.ai. As you draft a prompt, it read
 - Runs in your browser
 
 ## Install
-Coming to the Chrome Web Store soon.
+Install from the Chrome Web Store:
+https://chromewebstore.google.com/detail/model-picker-model-and-ef/hilolfchpmjmkjfnpjcedfeochdnlddk
 
 ## Support
-This repository exists for trust and support. The extension ships privately and the source is not public.
+This repository exists for trust and support. The extension is published on the Chrome Web Store and its source is not public.
 Questions and reports are welcome on the issue tracker:
 https://github.com/modelpicker/model-picker/issues
 
