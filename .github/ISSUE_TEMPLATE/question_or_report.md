@@ -1,12 +1,14 @@
 ---
-name: Question or report
-about: Ask a question or report a problem with Model Picker
+name: Report an issue
+about: Report a problem with Model Picker, or ask a question
 title: ""
 labels: ""
 ---
 
-**What happened, or what would you like to ask?**
+If you pressed Report an issue in the Model Picker popup, your anonymous counts are already on your clipboard. Please paste them under the first heading. The links on the settings page and the welcome page copy nothing, so check your clipboard before you paste.
 
-**Steps to reproduce (if a problem):**
+**Your counts:**
+
+**What happened, and what did you expect?**
 
 **Browser and version:**
