@@ -11,6 +11,93 @@ Web Store since August 5, 2026, item id `hilolfchpmjmkjfnpjcedfeochdnlddk`.
 
 ## [Unreleased]
 
+## [1.0.6] - 2026-11-11
+
+### Added
+
+- The badge shows when it is locked. On a conversation where you locked the
+  badge in place, its padlock is drawn solid green, where it was an outline
+  with a closed shackle; unlocked, it stays an outline. Pressing the padlock
+  on the badge now also says what happened, Badge locked here. or Badge
+  unlocked here., in the line under the model's name for two and a half
+  seconds, the way saving a prompt already does, and a screen reader hears
+  the same words. Locking from the popup changes the padlock and says
+  nothing on the badge.
+
+### Changed
+
+- Knows Fable 5.2, the newest Fable in Claude AI's model list. The badge
+  still says Fable, which means the newest one. The note about Fable's cost
+  now says about four times the quota per word of Sonnet, where 1.0.5 said
+  about 5x, since the newest Fable costs less than the one before it. If you
+  choose the older Fable 5.1 in the picker, it still costs about five times.
+- One button for Max and Ultra. Claude AI now offers an Ultra plan beside
+  Max with the same models and features, so the plan choice reads Max / Ultra
+  in the popup, on the settings page and on the welcome page. Your saved
+  choice does not change.
+- The notice in the popup about page problems now says only what stopped
+  working, in plainer words, with Claude AI named as Claude AI, and says
+  Everything else works. once, after its lines, unless the message box itself
+  cannot be found.
+- The two warnings on a long chat no longer repeat each other. When the long
+  thread tip shows, the note about a premium model's cost says only the cost,
+  for example Opus spends about twice the quota per word of Sonnet., and the
+  tip says the rest. The cost is written in words, about twice for Opus and
+  about four times for Fable, and the tip reads Long thread, about 12,900
+  words.
+- A saved prompt's buttons now sit beside its first line rather than in the
+  middle of the row. While you read a long prompt you opened with Show more,
+  the buttons and Show less stay at the top of the window until the prompt
+  ends, so you can copy, edit or close it without scrolling back.
+- Delete this prompt? now appears in the space the buttons used, with Keep and
+  Delete beneath it, so the prompt's words and the row stay where they were.
+  After Keep, or Escape, the keyboard is back on the delete button.
+- The badge's reason now describes the model and the effort it suggests, one
+  sentence each, and no longer names a kind of task, for example Sonnet
+  handles everyday work well. Medium effort gives it room to think. When your
+  plan moves the suggestion to another model, or your organization's limit
+  lowers the effort, the reason describes what the badge shows. A very long
+  paste keeps its own reason, which says the input is big, and in a long chat
+  a badge held on the model your picker shows keeps the long chat reason,
+  which says that staying avoids reading the whole conversation again.
+
+### Fixed
+
+- Tapping Rate on the Chrome Web Store on the badge did nothing on a touch
+  screen. It opens the store's page now, as a click does. The popup's button
+  with the same words already worked.
+- On the saved prompts page, pressing Copy, Pin, Show more, Show less, a
+  category, Select or a selection check sent the keyboard back to the top of
+  the page. The keyboard now stays on the control you pressed, and the Copied
+  and Exported words no longer move it either.
+- A saved prompts page left open did not show prompts saved from the badge
+  since it opened, and its Export could leave them out of the backup. It now
+  updates whenever your library changes, keeping your place and any prompt
+  you are editing, and Export always writes every saved prompt.
+- With Model Picker switched off, opening a Claude AI page could still record
+  whether the page's parts were found. Nothing is recorded now while it is off.
+- Word counts in the badge's notes followed the browser's language, for
+  example 1.234 in German. They are written 1,234 now, like the rest of the
+  English text.
+- The popup could stop drawing partway through if a stored setting for muted
+  chats was damaged. It now treats a damaged one as empty.
+- Importing a very large file read the whole file before refusing it, which
+  could freeze the settings page for seconds. It is refused before it is read.
+- An imported prompt dated in the future stayed at the top of the list for
+  good, and one with an impossible date read Saved undefined NaN, NaN. Such
+  dates now take the import's own date.
+- The popup's category bars could show stray text from a damaged statistics
+  record. They show only the extension's own categories now.
+- The selection on the saved prompts page could keep prompts deleted in
+  another tab, counting them and exporting an empty file. It forgets them now,
+  and an export with nothing in it is not written. The pointer now shows a
+  hand over a row you can select, and Show more appears or disappears when the
+  window's width changes.
+- On the welcome page, an explanation of a badge button can be closed with
+  Escape and stays open while the pointer moves onto it, the finished steps
+  keep their names for screen readers in a narrow window, and an explanation
+  no longer stays on screen after you move to another step.
+
 ## [1.0.5] - 2026-10-28
 
 ### Added
@@ -253,6 +340,11 @@ Web Store since August 5, 2026, item id `hilolfchpmjmkjfnpjcedfeochdnlddk`.
   conversation straight after closing its badge, no suggestion appears until
   you change a character. The draft you closed is remembered only on the open
   page and is never stored anywhere.
+
+  (Known since November 4, 2026. If you then open another conversation that
+  holds an unsent draft of its own, that draft counts as something different,
+  so the suggestion you closed can appear again when you go back. A fix is
+  planned for 1.1.0.)
 
 - A suggestion no longer follows you onto a page that has nothing to type
   into. When you left a conversation with a draft in its box for a page with
